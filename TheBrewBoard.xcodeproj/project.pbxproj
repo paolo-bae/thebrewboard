@@ -13,6 +13,11 @@
 		7AE89FF829798F1F006D5582 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AE89FF729798F1F006D5582 /* Preview Assets.xcassets */; };
 		7AE89FFA29798F1F006D5582 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE89FF929798F1F006D5582 /* Persistence.swift */; };
 		7AE89FFD29798F1F006D5582 /* TheBrewBoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AE89FFB29798F1F006D5582 /* TheBrewBoard.xcdatamodeld */; };
+		7AE8A00C2979A468006D5582 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A00B2979A468006D5582 /* Beer.swift */; };
+		7AE8A00E2979BAA3006D5582 /* BeerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A00D2979BAA3006D5582 /* BeerMock.swift */; };
+		7AE8A0102979BF95006D5582 /* BeersMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AE8A00F2979BF95006D5582 /* BeersMock.json */; };
+		7AE8A0152979C264006D5582 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A0142979C264006D5582 /* RequestProtocol.swift */; };
+		7AE8A0172979C41C006D5582 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A0162979C41C006D5582 /* RequestType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		7AE89FF729798F1F006D5582 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7AE89FF929798F1F006D5582 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7AE89FFC29798F1F006D5582 /* TheBrewBoard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheBrewBoard.xcdatamodel; sourceTree = "<group>"; };
+		7AE8A00B2979A468006D5582 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		7AE8A00D2979BAA3006D5582 /* BeerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerMock.swift; sourceTree = "<group>"; };
+		7AE8A00F2979BF95006D5582 /* BeersMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BeersMock.json; sourceTree = "<group>"; };
+		7AE8A0142979C264006D5582 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		7AE8A0162979C41C006D5582 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				7AE89FF729798F1F006D5582 /* Preview Assets.xcassets */,
+				7AE8A00F2979BF95006D5582 /* BeersMock.json */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -81,6 +92,7 @@
 		7AE8A00329798F31006D5582 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7AE8A0112979C192006D5582 /* data */,
 				7AE8A00829799002006D5582 /* domain */,
 			);
 			path = Core;
@@ -133,8 +145,35 @@
 		7AE8A00A297996FD006D5582 /* diydog */ = {
 			isa = PBXGroup;
 			children = (
+				7AE8A00B2979A468006D5582 /* Beer.swift */,
+				7AE8A00D2979BAA3006D5582 /* BeerMock.swift */,
 			);
 			path = diydog;
+			sourceTree = "<group>";
+		};
+		7AE8A0112979C192006D5582 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				7AE8A0122979C1B6006D5582 /* api */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		7AE8A0122979C1B6006D5582 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				7AE8A0132979C1E9006D5582 /* request */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		7AE8A0132979C1E9006D5582 /* request */ = {
+			isa = PBXGroup;
+			children = (
+				7AE8A0142979C264006D5582 /* RequestProtocol.swift */,
+				7AE8A0162979C41C006D5582 /* RequestType.swift */,
+			);
+			path = request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AE89FF829798F1F006D5582 /* Preview Assets.xcassets in Resources */,
+				7AE8A0102979BF95006D5582 /* BeersMock.json in Resources */,
 				7AE89FF529798F1F006D5582 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,9 +248,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AE89FFA29798F1F006D5582 /* Persistence.swift in Sources */,
+				7AE8A00E2979BAA3006D5582 /* BeerMock.swift in Sources */,
 				7AE89FF329798F1E006D5582 /* ContentView.swift in Sources */,
+				7AE8A00C2979A468006D5582 /* Beer.swift in Sources */,
 				7AE89FFD29798F1F006D5582 /* TheBrewBoard.xcdatamodeld in Sources */,
 				7AE89FF129798F1E006D5582 /* TheBrewBoardApp.swift in Sources */,
+				7AE8A0152979C264006D5582 /* RequestProtocol.swift in Sources */,
+				7AE8A0172979C41C006D5582 /* RequestType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
