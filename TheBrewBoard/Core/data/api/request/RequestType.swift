@@ -12,27 +12,6 @@ enum RequestType: String {
     case POST
 }
 
-extension RequestProtocol {
-    var host: String {
-        APIConstants.host
-    }
-
-    var addAutorizationToken: Bool {
-        false
-    }
-
-    var params: [String: Any] {
-        [:]
-    }
-
-    var urlParams: [String: String?] {
-        [:]
-    }
-
-    var headers: [String: String] {
-        [:]
-    }
-    
     func createURLRequest(authToken: String) throws -> URLRequest {
         var components = URLComponents()
         components.scheme = "https"

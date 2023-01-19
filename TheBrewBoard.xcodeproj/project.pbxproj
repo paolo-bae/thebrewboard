@@ -18,6 +18,7 @@
 		7AE8A0102979BF95006D5582 /* BeersMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AE8A00F2979BF95006D5582 /* BeersMock.json */; };
 		7AE8A0152979C264006D5582 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A0142979C264006D5582 /* RequestProtocol.swift */; };
 		7AE8A0172979C41C006D5582 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A0162979C41C006D5582 /* RequestType.swift */; };
+		7AE8A0192979CCEF006D5582 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A0182979CCEF006D5582 /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		7AE8A00F2979BF95006D5582 /* BeersMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BeersMock.json; sourceTree = "<group>"; };
 		7AE8A0142979C264006D5582 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		7AE8A0162979C41C006D5582 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		7AE8A0182979CCEF006D5582 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		7AE8A0122979C1B6006D5582 /* api */ = {
 			isa = PBXGroup;
 			children = (
+				7AE8A0182979CCEF006D5582 /* APIConstants.swift */,
 				7AE8A0132979C1E9006D5582 /* request */,
 			);
 			path = api;
@@ -252,6 +255,7 @@
 				7AE89FF329798F1E006D5582 /* ContentView.swift in Sources */,
 				7AE8A00C2979A468006D5582 /* Beer.swift in Sources */,
 				7AE89FFD29798F1F006D5582 /* TheBrewBoard.xcdatamodeld in Sources */,
+				7AE8A0192979CCEF006D5582 /* APIConstants.swift in Sources */,
 				7AE89FF129798F1E006D5582 /* TheBrewBoardApp.swift in Sources */,
 				7AE8A0152979C264006D5582 /* RequestProtocol.swift in Sources */,
 				7AE8A0172979C41C006D5582 /* RequestType.swift in Sources */,
