@@ -16,9 +16,16 @@
 		7AE8A00C2979A468006D5582 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A00B2979A468006D5582 /* Beer.swift */; };
 		7AE8A00E2979BAA3006D5582 /* BeerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A00D2979BAA3006D5582 /* BeerMock.swift */; };
 		7AE8A0102979BF95006D5582 /* BeersMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AE8A00F2979BF95006D5582 /* BeersMock.json */; };
-		7AE8A0152979C264006D5582 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A0142979C264006D5582 /* RequestProtocol.swift */; };
 		7AE8A0172979C41C006D5582 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A0162979C41C006D5582 /* RequestType.swift */; };
 		7AE8A0192979CCEF006D5582 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A0182979CCEF006D5582 /* APIConstants.swift */; };
+		7AE8A03F297C643F006D5582 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A03E297C643F006D5582 /* APIManager.swift */; };
+		7AE8A041297C645C006D5582 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A040297C645C006D5582 /* NetworkError.swift */; };
+		7AE8A043297C6495006D5582 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A042297C6495006D5582 /* RequestManager.swift */; };
+		7AE8A045297C655F006D5582 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A044297C655F006D5582 /* RequestProtocol.swift */; };
+		7AE8A048297C6651006D5582 /* DIYDogsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A047297C6651006D5582 /* DIYDogsRequest.swift */; };
+		7AE8A04B297C6840006D5582 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A04A297C6840006D5582 /* DataParser.swift */; };
+		7AE8A04E297C68B2006D5582 /* DIYDogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A04D297C68B2006D5582 /* DIYDogsView.swift */; };
+		7AE8A050297C693F006D5582 /* DIYDogRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8A04F297C693F006D5582 /* DIYDogRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +39,16 @@
 		7AE8A00B2979A468006D5582 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		7AE8A00D2979BAA3006D5582 /* BeerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerMock.swift; sourceTree = "<group>"; };
 		7AE8A00F2979BF95006D5582 /* BeersMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BeersMock.json; sourceTree = "<group>"; };
-		7AE8A0142979C264006D5582 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		7AE8A0162979C41C006D5582 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		7AE8A0182979CCEF006D5582 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		7AE8A03E297C643F006D5582 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = TheBrewBoard/Core/data/api/parser/network/APIManager.swift; sourceTree = SOURCE_ROOT; };
+		7AE8A040297C645C006D5582 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkError.swift; path = TheBrewBoard/Core/data/api/parser/network/NetworkError.swift; sourceTree = SOURCE_ROOT; };
+		7AE8A042297C6495006D5582 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestManager.swift; path = TheBrewBoard/Core/data/api/parser/network/RequestManager.swift; sourceTree = SOURCE_ROOT; };
+		7AE8A044297C655F006D5582 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		7AE8A047297C6651006D5582 /* DIYDogsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYDogsRequest.swift; sourceTree = "<group>"; };
+		7AE8A04A297C6840006D5582 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		7AE8A04D297C68B2006D5582 /* DIYDogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYDogsView.swift; sourceTree = "<group>"; };
+		7AE8A04F297C693F006D5582 /* DIYDogRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYDogRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +81,9 @@
 		7AE89FEF29798F1E006D5582 /* TheBrewBoard */ = {
 			isa = PBXGroup;
 			children = (
-				7AE8A00729798F7E006D5582 /* DIYDogDetail */,
-				7AE8A00629798F65006D5582 /* Search */,
-				7AE8A00529798F4A006D5582 /* FavouriteDIYDogs */,
+				7AE8A054297C6AEB006D5582 /* FavouriteDIYDogs */,
+				7AE8A053297C6AE0006D5582 /* Search */,
+				7AE8A052297C6ACF006D5582 /* DIYDogDetail */,
 				7AE8A00429798F3C006D5582 /* DIYDogs */,
 				7AE8A00329798F31006D5582 /* Core */,
 				7AE89FF029798F1E006D5582 /* TheBrewBoardApp.swift */,
@@ -103,29 +117,9 @@
 		7AE8A00429798F3C006D5582 /* DIYDogs */ = {
 			isa = PBXGroup;
 			children = (
+				7AE8A04C297C6898006D5582 /* views */,
 			);
 			path = DIYDogs;
-			sourceTree = "<group>";
-		};
-		7AE8A00529798F4A006D5582 /* FavouriteDIYDogs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FavouriteDIYDogs;
-			sourceTree = "<group>";
-		};
-		7AE8A00629798F65006D5582 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		7AE8A00729798F7E006D5582 /* DIYDogDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DIYDogDetail;
 			sourceTree = "<group>";
 		};
 		7AE8A00829799002006D5582 /* domain */ = {
@@ -164,6 +158,7 @@
 		7AE8A0122979C1B6006D5582 /* api */ = {
 			isa = PBXGroup;
 			children = (
+				7AE8A049297C682F006D5582 /* parser */,
 				7AE8A0182979CCEF006D5582 /* APIConstants.swift */,
 				7AE8A0132979C1E9006D5582 /* request */,
 			);
@@ -173,10 +168,68 @@
 		7AE8A0132979C1E9006D5582 /* request */ = {
 			isa = PBXGroup;
 			children = (
-				7AE8A0142979C264006D5582 /* RequestProtocol.swift */,
+				7AE8A046297C6630006D5582 /* diydogs */,
 				7AE8A0162979C41C006D5582 /* RequestType.swift */,
+				7AE8A044297C655F006D5582 /* RequestProtocol.swift */,
 			);
 			path = request;
+			sourceTree = "<group>";
+		};
+		7AE8A046297C6630006D5582 /* diydogs */ = {
+			isa = PBXGroup;
+			children = (
+				7AE8A047297C6651006D5582 /* DIYDogsRequest.swift */,
+			);
+			path = diydogs;
+			sourceTree = "<group>";
+		};
+		7AE8A049297C682F006D5582 /* parser */ = {
+			isa = PBXGroup;
+			children = (
+				7AE8A051297C6AAA006D5582 /* network */,
+				7AE8A04A297C6840006D5582 /* DataParser.swift */,
+			);
+			path = parser;
+			sourceTree = "<group>";
+		};
+		7AE8A04C297C6898006D5582 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				7AE8A04D297C68B2006D5582 /* DIYDogsView.swift */,
+				7AE8A04F297C693F006D5582 /* DIYDogRow.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		7AE8A051297C6AAA006D5582 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				7AE8A040297C645C006D5582 /* NetworkError.swift */,
+				7AE8A042297C6495006D5582 /* RequestManager.swift */,
+				7AE8A03E297C643F006D5582 /* APIManager.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		7AE8A052297C6ACF006D5582 /* DIYDogDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DIYDogDetail;
+			sourceTree = "<group>";
+		};
+		7AE8A053297C6AE0006D5582 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		7AE8A054297C6AEB006D5582 /* FavouriteDIYDogs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavouriteDIYDogs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,12 +305,19 @@
 			files = (
 				7AE89FFA29798F1F006D5582 /* Persistence.swift in Sources */,
 				7AE8A00E2979BAA3006D5582 /* BeerMock.swift in Sources */,
+				7AE8A050297C693F006D5582 /* DIYDogRow.swift in Sources */,
+				7AE8A03F297C643F006D5582 /* APIManager.swift in Sources */,
+				7AE8A045297C655F006D5582 /* RequestProtocol.swift in Sources */,
+				7AE8A043297C6495006D5582 /* RequestManager.swift in Sources */,
 				7AE89FF329798F1E006D5582 /* ContentView.swift in Sources */,
 				7AE8A00C2979A468006D5582 /* Beer.swift in Sources */,
 				7AE89FFD29798F1F006D5582 /* TheBrewBoard.xcdatamodeld in Sources */,
 				7AE8A0192979CCEF006D5582 /* APIConstants.swift in Sources */,
+				7AE8A048297C6651006D5582 /* DIYDogsRequest.swift in Sources */,
+				7AE8A04E297C68B2006D5582 /* DIYDogsView.swift in Sources */,
 				7AE89FF129798F1E006D5582 /* TheBrewBoardApp.swift in Sources */,
-				7AE8A0152979C264006D5582 /* RequestProtocol.swift in Sources */,
+				7AE8A041297C645C006D5582 /* NetworkError.swift in Sources */,
+				7AE8A04B297C6840006D5582 /* DataParser.swift in Sources */,
 				7AE8A0172979C41C006D5582 /* RequestType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

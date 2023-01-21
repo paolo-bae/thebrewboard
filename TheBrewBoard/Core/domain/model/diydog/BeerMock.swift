@@ -7,8 +7,13 @@
 
 import Foundation
 
+// MARK: - Mock data
+extension Beer {
+    static let mock = loadBeers()
+}
+
 private struct BeersMock: Codable {
-    let beers = [Beer]
+    let beers: [Beer]
 }
 
 private func loadBeers() -> [Beer] {
@@ -22,8 +27,4 @@ private func loadBeers() -> [Beer] {
     let jsonMock = try? decoder.decode(BeersMock.self, from: data)
     
     return jsonMock?.beers ?? []
-}
-
-extension Beer {
-    static let mock = loadBeers()
 }

@@ -95,3 +95,6 @@ struct MashTemp: Codable {
 
 typealias Beer = BeerElement
 
+extension Beer: Identifiable {
+}
+
