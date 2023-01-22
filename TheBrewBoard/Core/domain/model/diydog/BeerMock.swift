@@ -17,10 +17,8 @@ private struct BeersMock: Codable {
 }
 
 private func loadBeers() -> [Beer] {
-    guard let url = Bundle.main.url(
-        forResource: "BeersMock",
-        withExtension: "json"
-    ), let data = try? Data(contentsOf: url) else { return [] }
+    guard let url = Bundle.main.url(forResource: "BeersMock", withExtension: "json"),
+            let data = try? Data(contentsOf: url) else { return [] }
     let decoder = JSONDecoder()
     
     decoder.keyDecodingStrategy = .convertFromSnakeCase

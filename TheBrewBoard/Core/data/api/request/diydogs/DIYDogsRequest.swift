@@ -11,13 +11,13 @@ enum DIYDogsRequest: RequestProtocol {
     case getDIYDogsBy(page: Int)
     
     var path: String {
-        "/beers"
+        "/v2/beers"
     }
     
     var urlParams: [String: String?] {
         switch self {
         case let .getDIYDogsBy(page):
-            var params = ["page": String(page)]
+            let params = ["page": String(page)]
             return params
         }
     }

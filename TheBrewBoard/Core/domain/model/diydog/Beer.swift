@@ -10,19 +10,22 @@ import Foundation
 // MARK: - BeerElement
 struct BeerElement: Codable {
     let id: Int
-    let name, tagline, firstBrewed, description: String
-    let imageURL: String
-    let abv: Double
-    let ibu, targetFg: Int
-    let targetOg: Double
+    let firstBrewed: String?
+    let name, tagline, description: String
+    let imageURL: String?
+    let abv, ibu: Double?
+    let targetFg: Double?
+    let targetOg: Double?
     let ebc, srm: Double?
-    let ph, attenuationLevel: Double
-    let volume, boilVolume: Amount
+    let ph: Double?
+    let attenuationLevel: Double?
+    let volume: Amount
+    let boilVolume: Amount?
     let method: Method
     let ingredients: Ingredients
-    let foodPairing: [String]
-    let brewersTips: String
-    let contributedBy: String
+    let foodPairing: [String]?
+    let brewersTips: String?
+    let contributedBy: String?
 
     enum CodingKeys: String, CodingKey {
         case id, name, tagline
@@ -72,7 +75,7 @@ struct Hop: Codable {
 
 // MARK: - Method
 struct Method: Codable {
-    let mashTemp: [MashTemp]
+    let mashTemp: [MashTemp]?
     let fermentation: Fermentation
     let twist: String?
 
@@ -90,11 +93,12 @@ struct Fermentation: Codable {
 // MARK: - MashTemp
 struct MashTemp: Codable {
     let temp: Amount
-    let duration: Int?
+    let duration: Int
 }
 
 typealias Beer = BeerElement
 
 extension Beer: Identifiable {
 }
+
 

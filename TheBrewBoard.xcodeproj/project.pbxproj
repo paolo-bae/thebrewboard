@@ -186,8 +186,8 @@
 		7AE8A049297C682F006D5582 /* parser */ = {
 			isa = PBXGroup;
 			children = (
-				7AE8A051297C6AAA006D5582 /* network */,
 				7AE8A04A297C6840006D5582 /* DataParser.swift */,
+				7AE8A051297C6AAA006D5582 /* network */,
 			);
 			path = parser;
 			sourceTree = "<group>";

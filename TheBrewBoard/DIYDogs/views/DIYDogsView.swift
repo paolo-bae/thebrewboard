@@ -38,7 +38,10 @@ struct DIYDogsView: View {
         self.beers = beers
         await stopLoading()
       } catch {
+          print("\(error)")
       }
+        // DEBUG
+        //rint("\(beers)")
     }
 
     @MainActor

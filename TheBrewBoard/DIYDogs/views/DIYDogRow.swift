@@ -12,7 +12,7 @@ struct DIYDogRow: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: beer.imageURL)) { image in
+            AsyncImage(url: URL(string: beer.imageURL ?? "")) { image in
                 image
                     .resizable()
             } placeholder: {

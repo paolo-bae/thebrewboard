@@ -23,8 +23,10 @@ class APIManager: APIManagerProtocol {
         
         guard let httpResponse = response as? HTTPURLResponse,
               httpResponse.statusCode == 200 else {
-                throw NetworkError.invalidServerResponse
-        }
+                throw NetworkError.invalidServerResponse }
+        //DEBUG
+        print("\(httpResponse)")
+        //print("\(String(decoding: data, as: UTF8.self))")
         return data
     }
 }
