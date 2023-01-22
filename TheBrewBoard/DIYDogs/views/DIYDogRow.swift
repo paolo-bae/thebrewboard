@@ -16,7 +16,7 @@ struct DIYDogRow: View {
                 image
                     .resizable()
             } placeholder: {
-                Image("rw-logo")
+                Image("")
                     .resizable()
             }
             .aspectRatio(contentMode: .fit)

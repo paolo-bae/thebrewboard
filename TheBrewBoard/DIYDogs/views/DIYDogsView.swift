@@ -29,6 +29,9 @@ struct DIYDogsView: View {
             ProgressView("Bottling beers...")
           }
         }
+        .refreshable {
+            await fetchDIYDogs()
+        }
       }
     }
 
