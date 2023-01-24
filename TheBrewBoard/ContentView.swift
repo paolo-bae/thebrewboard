@@ -12,7 +12,11 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            DIYDogsView()
+            DIYDogsView(vm: DIYDogsViewModel(
+                diyDogFetcher: FetchDIYDogsService(
+                    requestManager: RequestManager())
+                )
+            )
                 .tabItem {
                     Label("All beers", systemImage: "mustache.fill")
                 }

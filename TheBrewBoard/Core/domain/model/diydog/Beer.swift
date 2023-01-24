@@ -12,7 +12,7 @@ struct BeerElement: Codable {
     let id: Int
     let firstBrewed: String?
     let name, tagline, description: String
-    let imageURL: String?
+    let imageURL: URL?
     let abv, ibu: Double?
     let targetFg: Double?
     let targetOg: Double?
@@ -93,12 +93,22 @@ struct Fermentation: Codable {
 // MARK: - MashTemp
 struct MashTemp: Codable {
     let temp: Amount
-    let duration: Int
+    let duration: Int?
 }
 
 typealias Beer = BeerElement
 
 extension Beer: Identifiable {
+}
+
+extension Beer: Hashable {
+    static func == (lhs: Beer, rhs: Beer) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
 
 

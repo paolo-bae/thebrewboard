@@ -12,16 +12,14 @@ struct DIYDogRow: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: beer.imageURL ?? "")) { image in
+            AsyncImage(url: beer.imageURL) { image in
                 image
                     .resizable()
             } placeholder: {
-                Image("")
-                    .resizable()
+                ProgressView()
             }
             .aspectRatio(contentMode: .fit)
-            .frame(width: 112, height: 112)
-            .cornerRadius(8)
+            .frame(width: 100, height: 100)
             
             VStack(alignment: .leading) {
                 Text(beer.name)

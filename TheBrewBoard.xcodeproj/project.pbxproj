@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A50AF742980265E003EE91D /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = 7A50AF732980265E003EE91D /* ModalView */; };
+		7A50AF7729802A71003EE91D /* DIYDogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50AF7629802A71003EE91D /* DIYDogsViewModel.swift */; };
+		7A50AF7A29802FC2003EE91D /* FetchDIYDogsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50AF7929802FC2003EE91D /* FetchDIYDogsService.swift */; };
+		7A50AF7C29803AB2003EE91D /* DIYDogsFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50AF7B29803AB2003EE91D /* DIYDogsFetcherMock.swift */; };
+		7AA22F02297EF4D50016578A /* DIYDogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA22F01297EF4D50016578A /* DIYDogDetailView.swift */; };
 		7AE89FF129798F1E006D5582 /* TheBrewBoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE89FF029798F1E006D5582 /* TheBrewBoardApp.swift */; };
 		7AE89FF329798F1E006D5582 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE89FF229798F1E006D5582 /* ContentView.swift */; };
 		7AE89FF529798F1F006D5582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AE89FF429798F1F006D5582 /* Assets.xcassets */; };
@@ -29,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A50AF7629802A71003EE91D /* DIYDogsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYDogsViewModel.swift; sourceTree = "<group>"; };
+		7A50AF7929802FC2003EE91D /* FetchDIYDogsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDIYDogsService.swift; sourceTree = "<group>"; };
+		7A50AF7B29803AB2003EE91D /* DIYDogsFetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYDogsFetcherMock.swift; sourceTree = "<group>"; };
+		7AA22F01297EF4D50016578A /* DIYDogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYDogDetailView.swift; sourceTree = "<group>"; };
 		7AE89FED29798F1E006D5582 /* TheBrewBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBrewBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE89FF029798F1E006D5582 /* TheBrewBoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBrewBoardApp.swift; sourceTree = "<group>"; };
 		7AE89FF229798F1E006D5582 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,12 +65,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A50AF742980265E003EE91D /* ModalView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A50AF7529802A58003EE91D /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7A50AF7629802A71003EE91D /* DIYDogsViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		7A50AF7829802EDB003EE91D /* services */ = {
+			isa = PBXGroup;
+			children = (
+				7A50AF7929802FC2003EE91D /* FetchDIYDogsService.swift */,
+				7A50AF7B29803AB2003EE91D /* DIYDogsFetcherMock.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		7AA22F00297EF4B70016578A /* views */ = {
+			isa = PBXGroup;
+			children = (
+				7AA22F01297EF4D50016578A /* DIYDogDetailView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		7AE89FE429798F1E006D5582 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +125,6 @@
 				7AE89FF229798F1E006D5582 /* ContentView.swift */,
 				7AE89FF429798F1F006D5582 /* Assets.xcassets */,
 				7AE89FF929798F1F006D5582 /* Persistence.swift */,
-				7AE89FFB29798F1F006D5582 /* TheBrewBoard.xcdatamodeld */,
 				7AE89FF629798F1F006D5582 /* Preview Content */,
 			);
 			path = TheBrewBoard;
@@ -117,6 +151,8 @@
 		7AE8A00429798F3C006D5582 /* DIYDogs */ = {
 			isa = PBXGroup;
 			children = (
+				7A50AF7829802EDB003EE91D /* services */,
+				7A50AF7529802A58003EE91D /* viewModel */,
 				7AE8A04C297C6898006D5582 /* views */,
 			);
 			path = DIYDogs;
@@ -150,6 +186,7 @@
 		7AE8A0112979C192006D5582 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				7AE8A055297DE8F7006D5582 /* coreData */,
 				7AE8A0122979C1B6006D5582 /* api */,
 			);
 			path = data;
@@ -214,6 +251,7 @@
 		7AE8A052297C6ACF006D5582 /* DIYDogDetail */ = {
 			isa = PBXGroup;
 			children = (
+				7AA22F00297EF4B70016578A /* views */,
 			);
 			path = DIYDogDetail;
 			sourceTree = "<group>";
@@ -232,6 +270,14 @@
 			path = FavouriteDIYDogs;
 			sourceTree = "<group>";
 		};
+		7AE8A055297DE8F7006D5582 /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				7AE89FFB29798F1F006D5582 /* TheBrewBoard.xcdatamodeld */,
+			);
+			path = coreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,6 +294,9 @@
 			dependencies = (
 			);
 			name = TheBrewBoard;
+			packageProductDependencies = (
+				7A50AF732980265E003EE91D /* ModalView */,
+			);
 			productName = TheBrewBoard;
 			productReference = 7AE89FED29798F1E006D5582 /* TheBrewBoard.app */;
 			productType = "com.apple.product-type.application";
@@ -276,6 +325,9 @@
 				Base,
 			);
 			mainGroup = 7AE89FE429798F1E006D5582;
+			packageReferences = (
+				7A50AF722980265E003EE91D /* XCRemoteSwiftPackageReference "modal-view" */,
+			);
 			productRefGroup = 7AE89FEE29798F1E006D5582 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -307,12 +359,16 @@
 				7AE8A00E2979BAA3006D5582 /* BeerMock.swift in Sources */,
 				7AE8A050297C693F006D5582 /* DIYDogRow.swift in Sources */,
 				7AE8A03F297C643F006D5582 /* APIManager.swift in Sources */,
+				7A50AF7A29802FC2003EE91D /* FetchDIYDogsService.swift in Sources */,
 				7AE8A045297C655F006D5582 /* RequestProtocol.swift in Sources */,
 				7AE8A043297C6495006D5582 /* RequestManager.swift in Sources */,
 				7AE89FF329798F1E006D5582 /* ContentView.swift in Sources */,
 				7AE8A00C2979A468006D5582 /* Beer.swift in Sources */,
+				7A50AF7C29803AB2003EE91D /* DIYDogsFetcherMock.swift in Sources */,
 				7AE89FFD29798F1F006D5582 /* TheBrewBoard.xcdatamodeld in Sources */,
+				7AA22F02297EF4D50016578A /* DIYDogDetailView.swift in Sources */,
 				7AE8A0192979CCEF006D5582 /* APIConstants.swift in Sources */,
+				7A50AF7729802A71003EE91D /* DIYDogsViewModel.swift in Sources */,
 				7AE8A048297C6651006D5582 /* DIYDogsRequest.swift in Sources */,
 				7AE8A04E297C68B2006D5582 /* DIYDogsView.swift in Sources */,
 				7AE89FF129798F1E006D5582 /* TheBrewBoardApp.swift in Sources */,
@@ -525,6 +581,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A50AF722980265E003EE91D /* XCRemoteSwiftPackageReference "modal-view" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diniska/modal-view";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A50AF732980265E003EE91D /* ModalView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A50AF722980265E003EE91D /* XCRemoteSwiftPackageReference "modal-view" */;
+			productName = ModalView;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7AE89FFB29798F1F006D5582 /* TheBrewBoard.xcdatamodeld */ = {

@@ -65,8 +65,6 @@ extension RequestProtocol {
             urlRequest.httpBody = try JSONSerialization.data(withJSONObject: params)
         }
         
-        //DEBUG
-        print ("\(urlRequest)")
         return urlRequest
     }
 }
