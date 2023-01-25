@@ -7,37 +7,69 @@
 
 import Foundation
 
-protocol DIYDogFetcher {
+protocol DIYDogsFetcher {
     func fetchDIYDogs(page: Int) async -> [Beer]
 }
 
+//CODE EXECUTED ON MAIN THREAD
 @MainActor
 
 final class DIYDogsViewModel: ObservableObject {
-    @Published var isLoading: Bool
-    @Published var hasMoreDIYDogs = true
-    private let diyDogFetcher: DIYDogFetcher
+    //REFACTORED VARIABLES FROM DIYDOGSVIEW
+    @Published private(set) var beers: [Beer] = []
+    @Published private(set) var viewState: ViewState?
     
+    private let diyDogFetcher: DIYDogsFetcher
     private(set) var page: Int = 1
     
+    var isLoading: Bool {
+        viewState == .loading
+    }
+    
+    var isFetching: Bool {
+        viewState == .fetching
+    }
+    
+    //INIT VM
     init(
-        isLoading: Bool = true,
-        diyDogFetcher: DIYDogFetcher
+        diyDogFetcher: DIYDogsFetcher
     ) {
-        self.isLoading = isLoading
         self.diyDogFetcher = diyDogFetcher
     }
     
     //FETCHING BEERS
     func fetchDIYDogs() async {
-        isLoading = true
-        let beers = await diyDogFetcher.fetchDIYDogs(page: page)
-        isLoading = false
-        hasMoreDIYDogs = !beers.isEmpty
+        viewState = .loading
+        
+        page = 1
+        
+        defer { viewState = .finished }
+        
+        self.beers = await diyDogFetcher.fetchDIYDogs(page: page)
     }
     
+    //FETCH MORE BEERS
     func fetchMoreDIYDogs() async {
+        viewState = .fetching
+        
+        defer { viewState = .finished }
+        
         page += 1
-        await fetchDIYDogs()
+        
+        self.beers += await diyDogFetcher.fetchDIYDogs(page: page)
+    }
+    
+    //CHECK THIRD ELEMENT FROM LAST OF BEER'S LIST
+    func hasReachedEnd(of DIYDog: Beer) -> Bool {
+        let thirdFromLastIndex: Int = beers.count - 3
+        return beers[thirdFromLastIndex].id == DIYDog.id
+    }
+}
+
+extension DIYDogsViewModel {
+    enum ViewState {
+        case loading
+        case fetching
+        case finished
     }
 }

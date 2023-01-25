@@ -17,7 +17,7 @@ struct FetchDIYDogsService {
 
 // MARK: - DIYDogs fetcher
 
-extension FetchDIYDogsService: DIYDogFetcher {
+extension FetchDIYDogsService: DIYDogsFetcher {
     
     func fetchDIYDogs(page: Int) async -> [Beer] {
         let requestData = DIYDogsRequest.getDIYDogsBy(page: page)
@@ -25,7 +25,7 @@ extension FetchDIYDogsService: DIYDogFetcher {
             let beers: [Beer] = try await requestManager.perform(requestData)
             return beers
         } catch {
-            print(error.localizedDescription)
+            print(error)
             return []
         }
     }

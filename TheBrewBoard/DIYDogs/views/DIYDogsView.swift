@@ -9,33 +9,39 @@ import SwiftUI
 import ModalView
 
 struct DIYDogsView: View {
-    @State var beers: [Beer] = []
-    
-    @StateObject var vm: DIYDogsViewModel
+    @ObservedObject var vm: DIYDogsViewModel
     
     var body: some View {
-        ModalPresenter {
-            List {
-                ForEach(beers) { beer in
-                    ModalLink(destination: DIYDogDetailView(beer: beer)) {
-                        DIYDogRow(beer: beer)
+        NavigationView {
+            ModalPresenter {
+                List() {
+                    ForEach(vm.beers) { beer in
+                        ModalLink(destination: DIYDogDetailView(beer: beer)) {
+                            DIYDogRow(beer: beer)
+                                .task {
+                                    if vm.hasReachedEnd(of: beer) && !vm.isFetching{
+                                        await vm.fetchMoreDIYDogs()
+                                    }
+                                }
+                        }
                     }
                 }
-            }
-            //.listStyle(.plain)
-            .task {
-                await vm.fetchDIYDogs()
-            }
-            .overlay {
-                if vm.isLoading {
-                    ProgressView("Bottling beers...")
+                .listStyle(.plain)
+                .task {
+                    await vm.fetchDIYDogs()
                 }
-            }
-            .refreshable {
-                await vm.fetchDIYDogs()
-            }
+                .overlay {
+                    if vm.isLoading && vm.beers.isEmpty {
+                        ProgressView("Bottling beers...")
+                    }
+                }
+                .refreshable {
+                    await vm.fetchDIYDogs()
+                }
+            }.navigationTitle("The Brew Board")
         }
     }
+    
 }
 
 struct DIYDogsView_Previews: PreviewProvider {

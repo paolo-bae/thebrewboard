@@ -21,7 +21,7 @@ struct BeerElement: Codable {
     let attenuationLevel: Double?
     let volume: Amount
     let boilVolume: Amount?
-    let method: Method
+    let method: Method?
     let ingredients: Ingredients
     let foodPairing: [String]?
     let brewersTips: String?
@@ -48,15 +48,15 @@ struct BeerElement: Codable {
 
 // MARK: - BoilVolume
 struct Amount: Codable {
-    let value: Double
-    let unit: String
+    let value: Double?
+    let unit: String?
 }
 
 // MARK: - Ingredients
 struct Ingredients: Codable {
     let malt: [Malt]
     let hops: [Hop]
-    let yeast: String
+    let yeast: String?
 }
 
 // MARK: - Malt
@@ -76,7 +76,7 @@ struct Hop: Codable {
 // MARK: - Method
 struct Method: Codable {
     let mashTemp: [MashTemp]?
-    let fermentation: Fermentation
+    let fermentation: Fermentation?
     let twist: String?
 
     enum CodingKeys: String, CodingKey {
@@ -87,7 +87,7 @@ struct Method: Codable {
 
 // MARK: - Fermentation
 struct Fermentation: Codable {
-    let temp: Amount
+    let temp: Amount?
 }
 
 // MARK: - MashTemp

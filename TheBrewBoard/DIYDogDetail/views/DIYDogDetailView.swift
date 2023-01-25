@@ -10,7 +10,7 @@ struct DIYDogDetailView: View {
     @State var beer: Beer
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("\(beer.name)")
     }
 }
 

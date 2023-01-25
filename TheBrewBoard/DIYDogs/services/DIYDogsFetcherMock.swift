@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DIYDogsFetcherMock: DIYDogFetcher {
+struct DIYDogsFetcherMock: DIYDogsFetcher {
   func fetchDIYDogs(page: Int) async -> [Beer] {
     Beer.mock
   }
