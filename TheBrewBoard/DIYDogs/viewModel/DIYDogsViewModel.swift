@@ -64,6 +64,8 @@ final class DIYDogsViewModel: ObservableObject {
         let thirdFromLastIndex: Int = beers.count - 3
         return beers[thirdFromLastIndex].id == DIYDog.id
     }
+    
+    
 }
 
 extension DIYDogsViewModel {

@@ -11,6 +11,7 @@ struct DIYDogRow: View {
     let beer: Beer
     
     var body: some View {
+        
         HStack {
             AsyncImage(url: beer.imageURL) { image in
                 image
@@ -19,12 +20,16 @@ struct DIYDogRow: View {
                 ProgressView()
             }
             .aspectRatio(contentMode: .fit)
-            .frame(width: 100, height: 100)
+            .frame(width: 110, height: 110)
             
             VStack(alignment: .leading) {
                 Text(beer.name)
-                    .multilineTextAlignment(.center)
-                    .font(.title3)
+                    .font(.title2)
+                Text(beer.tagline)
+                HStack {
+                    Text("ABV: " + (NSString(format: "%.1f", beer.abv ?? "") as String))
+                    Text("IBU: " + (NSString(format: "%.1f", beer.ibu ?? "") as String))
+                }
             }
             .lineLimit(1)
         }

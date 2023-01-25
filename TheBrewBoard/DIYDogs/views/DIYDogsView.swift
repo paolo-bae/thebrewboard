@@ -30,15 +30,16 @@ struct DIYDogsView: View {
                 .task {
                     await vm.fetchDIYDogs()
                 }
-                .overlay {
-                    if vm.isLoading && vm.beers.isEmpty {
-                        ProgressView("Bottling beers...")
-                    }
-                }
                 .refreshable {
                     await vm.fetchDIYDogs()
                 }
-            }.navigationTitle("The Brew Board")
+            }
+            .navigationTitle("The Brew Board")
+            .overlay {
+                if (vm.isFetching || vm.isLoading) && vm.beers.isEmpty {
+                    ProgressView("Bottling beers...")
+                }
+            }
         }
     }
     

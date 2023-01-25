@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CoreData
+//import CoreData
 
 struct ContentView: View {
     
@@ -19,6 +19,10 @@ struct ContentView: View {
             )
                 .tabItem {
                     Label("All beers", systemImage: "mustache.fill")
+                }
+            Text("Display Favourites Here")
+                .tabItem {
+                    Label("Favourites", systemImage: "heart.fill")
                 }
         }
     }
