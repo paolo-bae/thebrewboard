@@ -20,7 +20,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("All beers", systemImage: "mustache.fill")
                 }
-            Text("Display Favourites Here")
+            Text("WIP: Display Favourites Here")
                 .tabItem {
                     Label("Favourites", systemImage: "heart.fill")
                 }

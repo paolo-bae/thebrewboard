@@ -20,7 +20,7 @@ struct DIYDogRow: View {
                 ProgressView()
             }
             .aspectRatio(contentMode: .fit)
-            .frame(width: 110, height: 110)
+            .frame(width: 70, height: 100, alignment: .center)
             
             VStack(alignment: .leading) {
                 Text(beer.name)
