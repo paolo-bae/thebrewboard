@@ -17,7 +17,7 @@ protocol DIYDogsFetcher {
 final class DIYDogsViewModel: ObservableObject {
     //REFACTORED VARIABLES FROM DIYDOGSVIEW
     @Published private(set) var beers: [Beer] = []
-    @Published private(set) var viewState: ViewState?
+    @Published private(set) var viewState: ViewState = .networkError
     
     private let diyDogFetcher: DIYDogsFetcher
     private(set) var page: Int = 1
@@ -28,6 +28,10 @@ final class DIYDogsViewModel: ObservableObject {
     
     var isFetching: Bool {
         viewState == .fetching
+    }
+    
+    var networkError: Bool {
+        viewState == .networkError
     }
     
     //INIT VM
@@ -73,5 +77,6 @@ extension DIYDogsViewModel {
         case loading
         case fetching
         case finished
+        case networkError
     }
 }

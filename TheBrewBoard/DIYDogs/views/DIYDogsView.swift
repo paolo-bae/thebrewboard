@@ -38,19 +38,22 @@ struct DIYDogsView: View {
             .overlay {
                 if (vm.isFetching || vm.isLoading) && vm.beers.isEmpty {
                     ProgressView("Bottling beers...")
+                } else if !vm.isLoading && !vm.isFetching && vm.beers.isEmpty {
+                        Text ("😓 Something went wrong, retry later...")
                 }
             }
         }
     }
     
-}
-
-struct DIYDogsView_Previews: PreviewProvider {
-    static var previews: some View {
-        DIYDogsView(vm:
-                        DIYDogsViewModel(
-                            diyDogFetcher: DIYDogsFetcherMock()
-                        )
-        )
+    
+    
+    struct DIYDogsView_Previews: PreviewProvider {
+        static var previews: some View {
+            DIYDogsView(vm:
+                            DIYDogsViewModel(
+                                diyDogFetcher: DIYDogsFetcherMock()
+                            )
+            )
+        }
     }
 }

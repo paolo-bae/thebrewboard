@@ -24,12 +24,16 @@ struct DIYDogRow: View {
             
             VStack(alignment: .leading) {
                 Text(beer.name)
-                    .font(.title2)
+                    .font(.system(size: 20, weight: .bold))
                 Text(beer.tagline)
+                    .padding(.top, 1)
                 HStack {
-                    Text("ABV: " + (NSString(format: "%.1f", beer.abv ?? "") as String))
-                    Text("IBU: " + (NSString(format: "%.1f", beer.ibu ?? "") as String))
+                    Text("ABV:")
+                        .font(.system(size: 15, weight: .bold))
+                    Text((NSString(format: "%.1f", beer.abv ?? "") as String))
+                        .font(.system(size: 15))
                 }
+                .padding(.top, 0.3)
             }
             .lineLimit(1)
         }
